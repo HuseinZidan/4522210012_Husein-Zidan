@@ -1,0 +1,21 @@
+@startuml DaycareUseCase
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Orang Tua" as OrangTua
+actor "Staf" as Staf
+
+rectangle "Use Cases" {
+  usecase "Daftar Anak" as DaftarAnak
+  usecase "Lihat Jadwal" as LihatJadwal
+  usecase "Buat Laporan" as BuatLaporan
+
+  OrangTua --> DaftarAnak
+  OrangTua --> LihatJadwal
+
+  Staf --> LihatJadwal
+  Staf --> BuatLaporan
+}
+
+@enduml
